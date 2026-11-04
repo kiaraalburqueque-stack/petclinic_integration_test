@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.Set;
 
 /**
- * 
+ *
  * @author jgomezm
  *
  */
@@ -25,6 +25,10 @@ public class Vet {
 
 	@Column(name = "last_name")
 	private String lastName;
+
+	private String email;
+	private String phone;
+	private Boolean active = true;
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
